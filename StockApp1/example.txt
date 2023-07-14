@@ -1,0 +1,28 @@
+this.chartOptions = {
+          exportEnabled: true, 
+          title: {
+            text: cmp + " Price",
+          },
+          axisX: {
+            valueFormatString: "DD MMM HH:mm",
+            crosshair: {
+              enabled: true,
+              valueFormatString: "DD MMM YYYY HH:mm",
+              snapToDataPoint: true
+            }
+          },
+          axisY: {
+            title: "Price in $",
+            prefix: "$",
+            crosshair: {
+              enabled: true
+            }
+          },
+          data:[{
+            xValueType: "dateTime",
+            type: "candlestick",
+            yValueFormatString: "$##.##",
+            xValueFormatString: "DD MMM YYYY HH:mm",
+            dataPoints: this.dps
+          }]
+        }
